@@ -31,14 +31,6 @@ body {
     background: var(--theme-color, blue);
     height: var(--top-bar-height);
     width: 100%;
-    position: fixed;
-}
-
-/* This puts space behind the fixed main bar. */
-#search-bar::before {
-    display: block;
-    height: var(--top-bar-height);
-    content: ":"; /* Content required to occupy space */
 }
 
 /* Search Bar */
@@ -76,13 +68,6 @@ body {
 /* Sidebar for wide screen */
 
 @media (min-width: 30rem) {
-    /* This unsets the space behind the main bar,
-     * as it's only needed when main bar is fixed.
-     */
-    #search-bar::before {
-        display: none;
-    }
-
     body {
         display: grid;
         grid-template-columns: 2fr 5fr 2fr;
