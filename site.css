@@ -11,6 +11,7 @@
     --dark-color: black;
     --light-color: white;
     --theme-color: #1f694b;
+    --theme-highlight-color: #207a50;
     --accent-color: #d69532;
 
     font-size: clamp(12px, calc(10px + 0.5vw), 28px);
@@ -40,6 +41,96 @@ h2 {
     color: var(--light-color, white);
     background: var(--theme-color, blue);
     width: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#main-bar h1 {
+    display: none;
+}
+
+#main-bar h1 i {
+    display: inline-block;
+    height: 2.5rem;
+    width: 2.5rem;
+    position: relative;
+    top: 0.3rem;
+}
+
+#main-bar menu {
+    font-size: 1.2rem;
+    list-style: none;
+    padding-bottom: 0.5rem;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#main-bar menu a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--light-color);
+    text-decoration: none;
+}
+
+#main-bar a:hover {
+    background-color: var(--theme-highlight-color);
+}
+
+#main-bar menu i {
+    display: inline-block;
+    height: 1.5rem;
+    width: 1.5rem;
+    position: relative;
+    top: 0.15rem;
+}
+
+#main-bar menu .item-text {
+    display: inline-block;
+    position: relative;
+    top: -0.1rem;
+}
+
+i.dashboard {
+    background-image: url("icons/dash-dashboard.svg");
+}
+
+i.home {
+    background-image: url("icons/dash-home.svg");
+}
+
+i.profile {
+    background-image: url("icons/dash-profile.svg");
+}
+
+i.messages {
+    background-image: url("icons/dash-messages.svg");
+}
+
+i.history {
+    background-image: url("icons/dash-history.svg");
+}
+
+i.tasks {
+    background-image: url("icons/dash-tasks.svg");
+}
+
+i.communities {
+    background-image: url("icons/dash-communities.svg");
+}
+
+i.settings {
+    background-image: url("icons/dash-settings.svg");
+}
+
+i.support {
+    background-image: url("icons/dash-support.svg");
+}
+
+i.privacy {
+    background-image: url("icons/dash-privacy.svg");
 }
 
 /* Search Bar */
@@ -79,7 +170,7 @@ h2 {
 @media (min-width: 30rem) {
     body {
         display: grid;
-        grid-template-columns: 2fr 5fr 2fr;
+        grid-template-columns: minmax(15rem, 2fr) 5fr 2fr;
         grid-template-rows: 3rem 5rem 1fr 1fr;
     }
     
@@ -89,6 +180,20 @@ h2 {
         width: unset;
         grid-column: 1;
         grid-row: 1 / -1;
+        gap: 2.5rem;
+    }
+
+    #main-bar h1 {
+        display: block;
+        padding: 0.5rem;
+    }
+
+    #main-bar menu {
+        flex-direction: column;
+    }
+
+    #main-bar menu .item-text {
+        margin-left: 0.4rem;
     }
 
     #search-bar {
