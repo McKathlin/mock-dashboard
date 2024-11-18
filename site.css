@@ -140,6 +140,12 @@ i.privacy {
     background: var(--light-color, white);
 }
 
+a {
+    color: var(--dark-color, black);
+    text-decoration: none;
+}
+
+
 /* Greeting Bar */
 
 #greeting-bar {
