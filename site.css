@@ -138,13 +138,22 @@ i.privacy {
 #search-bar {
     color: var(--dark-color, black);
     background: var(--light-color, white);
+    padding: 0 4rem 0 2rem;
+
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
-a {
+#search-bar a {
+    display: block;
     color: var(--dark-color, black);
     text-decoration: none;
 }
 
+#search-bar a#notifications-link {
+    margin-left: auto;
+}
 
 /* Greeting Bar */
 
