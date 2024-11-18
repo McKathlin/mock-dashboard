@@ -1,5 +1,59 @@
-body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: black;
-    background-color: #e4e6ec;
+/* Entire Site */
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+body {
+    --back-color: #e4e6ec;
+    --dark-color: black;
+    --light-color: white;
+    --theme-color: #1f694b;
+    --accent-color: #d69532;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--dark-color, black);
+    background-color: var(--back-color, white);
+}
+
+/* Main Bar */
+
+#main-bar {
+    color: var(--light-color, white);
+    background: var(--theme-color, blue);
+}
+
+/* Search Bar */
+
+#search-bar {
+    color: var(--dark-color, black);
+    background: var(--light-color, white);
+}
+
+/* Greeting Bar */
+
+#greeting-bar {
+    color: var(--dark-color, black);
+    background: var(--light-color, white);
+}
+
+/* Projects */
+
+#projects {
+
+}
+
+/* Announcements */
+
+#announcements {
+
+}
+
+/* Trending */
+
+#trending {
+
+}
+
