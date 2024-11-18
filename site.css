@@ -13,8 +13,6 @@ body {
     --theme-color: #1f694b;
     --accent-color: #d69532;
 
-    --top-bar-height: 2rem;
-
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: var(--dark-color, black);
     background-color: var(--back-color, white);
@@ -29,7 +27,6 @@ body {
 #main-bar {
     color: var(--light-color, white);
     background: var(--theme-color, blue);
-    height: var(--top-bar-height);
     width: 100%;
 }
 
