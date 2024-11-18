@@ -13,9 +13,15 @@ body {
     --theme-color: #1f694b;
     --accent-color: #d69532;
 
+    --top-bar-height: 2rem;
+
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: var(--dark-color, black);
     background-color: var(--back-color, white);
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Main Bar */
@@ -23,6 +29,16 @@ body {
 #main-bar {
     color: var(--light-color, white);
     background: var(--theme-color, blue);
+    height: var(--top-bar-height);
+    width: 100%;
+    position: fixed;
+}
+
+/* This puts space behind the fixed main bar. */
+#search-bar::before {
+    display: block;
+    height: var(--top-bar-height);
+    content: ":"; /* Content required to occupy space */
 }
 
 /* Search Bar */
@@ -57,3 +73,52 @@ body {
 
 }
 
+/* Sidebar for wide screen */
+
+@media (min-width: 30rem) {
+    /* This unsets the space behind the main bar,
+     * as it's only needed when main bar is fixed.
+     */
+    #search-bar::before {
+        display: none;
+    }
+
+    body {
+        display: grid;
+        grid-template-columns: 2fr 5fr 2fr;
+        grid-template-rows: 3rem 5rem 1fr 1fr;
+    }
+    
+    #main-bar {
+        position: static;
+        height: unset;
+        width: unset;
+        grid-column: 1;
+        grid-row: 1 / -1;
+    }
+
+    #search-bar {
+        grid-column: 2 / -1;
+        grid-row: 1;
+    }
+
+    #greeting-bar {
+        grid-column: 2 / -1;
+        grid-row: 2;
+    }
+
+    #projects {
+        grid-column: 2;
+        grid-row: 3 / -1;
+    }
+
+    #announcements {
+        grid-column: 3;
+        grid-row: 3;
+    }
+
+    #trending {
+        grid-column: 3;
+        grid-row: 4;
+    }
+}
