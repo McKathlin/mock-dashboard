@@ -66,7 +66,7 @@ h2 {
     text-decoration: underline;
 }
 
-#main-bar h1 icon {
+#main-bar h1 i {
     display: inline-block;
     height: 2rem;
     width: 2rem;
@@ -74,7 +74,7 @@ h2 {
     top: 0.3rem;
 }
 
-#main-bar menu icon {
+#main-bar menu i {
     display: inline-block;
     height: 1.5rem;
     width: 1.5rem;
@@ -82,43 +82,43 @@ h2 {
     top: 0.3rem;
 }
 
-icon.dashboard {
+i.dashboard {
     background-image: url("icons/dash-dashboard.svg");
 }
 
-icon.home {
+i.home {
     background-image: url("icons/dash-home.svg");
 }
 
-icon.profile {
+i.profile {
     background-image: url("icons/dash-profile.svg");
 }
 
-icon.messages {
+i.messages {
     background-image: url("icons/dash-messages.svg");
 }
 
-icon.history {
+i.history {
     background-image: url("icons/dash-history.svg");
 }
 
-icon.tasks {
+i.tasks {
     background-image: url("icons/dash-tasks.svg");
 }
 
-icon.communities {
+i.communities {
     background-image: url("icons/dash-communities.svg");
 }
 
-icon.settings {
+i.settings {
     background-image: url("icons/dash-settings.svg");
 }
 
-icon.support {
+i.support {
     background-image: url("icons/dash-support.svg");
 }
 
-icon.privacy {
+i.privacy {
     background-image: url("icons/dash-privacy.svg");
 }
 
