@@ -48,6 +48,7 @@ h2 {
 }
 
 #main-bar menu {
+    font-size: 1.2rem;
     list-style: none;
 
     display: flex;
@@ -77,6 +78,8 @@ h2 {
     display: inline-block;
     height: 1.5rem;
     width: 1.5rem;
+    position: relative;
+    top: 0.3rem;
 }
 
 icon.dashboard {
