@@ -51,8 +51,13 @@ icon {
     list-style: none;
 }
 
-#main-bar icon {
-    color: red;
+#main-bar a {
+    color: white;
+    text-decoration: none;
+}
+
+#main-bar a:hover {
+    text-decoration: underline;
 }
 
 #main-bar h1 icon {
