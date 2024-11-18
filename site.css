@@ -170,7 +170,7 @@ i.privacy {
 @media (min-width: 30rem) {
     body {
         display: grid;
-        grid-template-columns: 2fr 5fr 2fr;
+        grid-template-columns: minmax(15rem, 2fr) 5fr 2fr;
         grid-template-rows: 3rem 5rem 1fr 1fr;
     }
     
