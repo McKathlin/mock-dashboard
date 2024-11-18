@@ -47,6 +47,10 @@ icon {
     padding: 1rem;
 }
 
+#main-bar menu {
+    list-style: none;
+}
+
 #main-bar icon {
     color: red;
 }
@@ -54,6 +58,8 @@ icon {
 #main-bar h1 icon {
     height: 2rem;
     width: 2rem;
+    position: relative;
+    top: 0.3rem;
 }
 
 #main-bar menu icon {
@@ -63,8 +69,42 @@ icon {
 
 icon.dashboard {
     background-image: url("icons/dash-dashboard.svg");
-    position: relative;
-    top: 0.3rem;
+}
+
+icon.home {
+    background-image: url("icons/dash-home.svg");
+}
+
+icon.profile {
+    background-image: url("icons/dash-profile.svg");
+}
+
+icon.messages {
+    background-image: url("icons/dash-messages.svg");
+}
+
+icon.history {
+    background-image: url("icons/dash-history.svg");
+}
+
+icon.tasks {
+    background-image: url("icons/dash-tasks.svg");
+}
+
+icon.communities {
+    background-image: url("icons/dash-communities.svg");
+}
+
+icon.settings {
+    background-image: url("icons/dash-settings.svg");
+}
+
+icon.support {
+    background-image: url("icons/dash-support.svg");
+}
+
+icon.privacy {
+    background-image: url("icons/dash-privacy.svg");
 }
 
 /* Search Bar */
