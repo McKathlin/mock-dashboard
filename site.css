@@ -11,6 +11,7 @@
     --dark-color: black;
     --light-color: white;
     --theme-color: #1f694b;
+    --theme-highlight-color: #207a50;
     --accent-color: #d69532;
 
     font-size: clamp(12px, calc(10px + 0.5vw), 28px);
@@ -40,7 +41,6 @@ h2 {
     color: var(--light-color, white);
     background: var(--theme-color, blue);
     width: 100%;
-    padding: 1rem;
 
     display: flex;
     flex-direction: column;
@@ -54,20 +54,23 @@ h2 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 1rem;
 }
 
-#main-bar a {
-    color: white;
+#main-bar menu a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--light-color);
     text-decoration: none;
+}
+
+#main-bar a:hover {
+    background-color: var(--theme-highlight-color);
 }
 
 #main-bar h1 i {
     display: inline-block;
     height: 2rem;
     width: 2rem;
-    position: relative;
-    top: 0.3rem;
 }
 
 #main-bar menu i {
@@ -75,11 +78,13 @@ h2 {
     height: 1.5rem;
     width: 1.5rem;
     position: relative;
-    top: 0.3rem;
+    top: 0.15rem;
 }
 
 #main-bar menu .item-text {
     display: inline-block;
+    position: relative;
+    top: -0.1rem;
 }
 
 i.dashboard {
@@ -174,7 +179,6 @@ i.privacy {
 
     #main-bar menu {
         flex-direction: column;
-        gap: 0.6rem;
     }
 
     #main-bar menu .item-text {
