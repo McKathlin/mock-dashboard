@@ -44,11 +44,10 @@ h2 {
 
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
 }
 
 #main-bar h1 {
-    padding: 0.5rem;
+    display: none;
 }
 
 #main-bar h1 i {
@@ -56,12 +55,13 @@ h2 {
     height: 2.5rem;
     width: 2.5rem;
     position: relative;
-    top: 0.4rem;
+    top: 0.3rem;
 }
 
 #main-bar menu {
     font-size: 1.2rem;
     list-style: none;
+    padding-bottom: 0.5rem;
 
     display: flex;
     flex-direction: row;
@@ -181,6 +181,11 @@ i.privacy {
         grid-column: 1;
         grid-row: 1 / -1;
         gap: 2.5rem;
+    }
+
+    #main-bar h1 {
+        display: block;
+        padding: 0.5rem;
     }
 
     #main-bar menu {
