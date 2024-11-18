@@ -34,12 +34,37 @@ h2 {
     font-size: 1.5rem;
 }
 
+icon {
+    display: inline-block;
+}
+
 /* Main Bar */
 
 #main-bar {
     color: var(--light-color, white);
     background: var(--theme-color, blue);
     width: 100%;
+    padding: 1rem;
+}
+
+#main-bar icon {
+    color: red;
+}
+
+#main-bar h1 icon {
+    height: 2rem;
+    width: 2rem;
+}
+
+#main-bar menu icon {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+icon.dashboard {
+    background-image: url("icons/dash-dashboard.svg");
+    position: relative;
+    top: 0.3rem;
 }
 
 /* Search Bar */
