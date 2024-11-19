@@ -362,7 +362,7 @@ i.fork {
     body {
         display: grid;
         grid-template-columns: minmax(15rem, 2fr) 5fr 2fr;
-        grid-template-rows: min-content min-content 1fr 1fr;
+        grid-template-rows: min-content min-content min-content auto;
     }
     
     #main-bar {
