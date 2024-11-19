@@ -15,6 +15,8 @@
     --theme-highlight-color: #207a50;
     --accent-color: #d69532;
 
+    --top-bar-padding: 0 clamp(0.75rem, 2.5vw, 5rem);
+
     font-size: clamp(12px, calc(10px + 0.5vw), 28px);
 }
 
@@ -33,7 +35,7 @@ h1 {
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 i {
@@ -155,7 +157,7 @@ i.privacy {
 #search-bar {
     color: var(--plain-text-color, black);
     background: var(--light-color, white);
-    padding: 0 clamp(0.5rem, 2vw, 5rem);
+    padding: var(--top-bar-padding, 0);
 
     display: flex;
     align-items: center;
@@ -203,6 +205,21 @@ i.notifications {
     color: var(--dark-color, black);
     background: var(--light-color, white);
     box-shadow: 0 0.25rem 0.25rem 0 #00000824;
+    padding: var(--top-bar-padding);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+#greeting-block {
+    margin-right: auto;
+}
+
+#greeting-block h1 {
+    font-size: 1.2rem;
 }
 
 /* Projects */
