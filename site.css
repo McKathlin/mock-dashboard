@@ -9,7 +9,7 @@
 :root {
     --back-color: #ecebe4;
     --dark-color: black;
-    --plain-text-color: #444040;
+    --plain-text-color: #5f5454;
     --light-color: white;
     --theme-color: #1f694b;
     --theme-highlight-color: #207a50;
@@ -281,6 +281,15 @@ img.focus-pfp {
 
     display: flex;
     flex-flow: column;
+}
+
+.project-card h3 {
+    color: var(--dark-color);
+    font-size: 1rem;
+}
+
+.project-card p {
+    font-size: 0.85rem;
 }
 
 .action-row {
