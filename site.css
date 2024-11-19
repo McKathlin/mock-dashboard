@@ -15,11 +15,15 @@
     --theme-highlight-color: #207a50;
     --accent-color: #d69532;
 
+    --top-bar-padding: 0.5rem clamp(0.5rem, 3vw, 5rem);
+    --page-font: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    --system-font: system-ui, -apple-system, 'Segoe UI', Roboto, Ubuntu, 'Open Sans', sans-serif;
+
     font-size: clamp(12px, calc(10px + 0.5vw), 28px);
 }
 
 body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: var(--page-font, sans-serif);
     color: var(--plain-text-color, black);
     background-color: var(--back-color, white);
 
@@ -33,7 +37,7 @@ h1 {
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 i {
@@ -155,7 +159,7 @@ i.privacy {
 #search-bar {
     color: var(--plain-text-color, black);
     background: var(--light-color, white);
-    padding: 0 clamp(0.5rem, 2vw, 5rem);
+    padding: var(--top-bar-padding, 0.5rem);
 
     display: flex;
     align-items: center;
@@ -170,7 +174,7 @@ i.privacy {
 }
 
 #search-bar input[type="search"] {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, 'Open Sans', sans-serif;
+    font-family: var(--system-font, sans-serif);
     font-size: 1rem;
     color: var(--plain-text-color, black);
     background-color: var(--back-color, silver);
@@ -202,12 +206,57 @@ i.notifications {
 #greeting-bar {
     color: var(--dark-color, black);
     background: var(--light-color, white);
+    box-shadow: 0 0.25rem 0.25rem 0 #00000824;
+    padding: var(--top-bar-padding, 0.5rem);
+    padding-bottom: 0.8rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+img.focus-pfp {
+    display: block;
+    height: 3.6rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#greeting-block {
+    margin-right: auto;
+}
+
+#greeting-block p {
+    font-size: 0.9rem;
+}
+
+#greeting-block h1 {
+    font-size: 1.2rem;
+}
+
+#greeting-bar button {
+    font-family: var(--system-font, sans-serif);
+    font-size: 0.85rem;
+    line-height: 2rem;
+    color: var(--light-color, white);
+    background-color: var(--theme-color, blue);
+    width: 10ch;
+    height: 1lh;
+    border: none;
+    border-radius: 0.5lh;
+    cursor: pointer;
+}
+
+#greeting-bar button:hover {
+    background-color: var(--theme-highlight-color);
 }
 
 /* Projects */
 
 #projects {
-
 }
 
 /* Announcements */
@@ -228,7 +277,7 @@ i.notifications {
     body {
         display: grid;
         grid-template-columns: minmax(15rem, 2fr) 5fr 2fr;
-        grid-template-rows: 3rem 5rem 1fr 1fr;
+        grid-template-rows: min-content min-content 1fr 1fr;
     }
     
     #main-bar {
