@@ -202,12 +202,12 @@ i.notifications {
 #greeting-bar {
     color: var(--dark-color, black);
     background: var(--light-color, white);
+    box-shadow: 0 0.25rem 0.25rem 0 #00000824;
 }
 
 /* Projects */
 
 #projects {
-
 }
 
 /* Announcements */
