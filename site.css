@@ -9,6 +9,7 @@
 :root {
     --back-color: #ecebe4;
     --dark-color: black;
+    --plain-text-color: #444040;
     --light-color: white;
     --theme-color: #1f694b;
     --theme-highlight-color: #207a50;
@@ -19,7 +20,7 @@
 
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: var(--dark-color, black);
+    color: var(--plain-text-color, black);
     background-color: var(--back-color, white);
 
     min-height: 100vh;
@@ -33,6 +34,22 @@ h1 {
 
 h2 {
     font-size: 1.5rem;
+}
+
+i {
+    display: inline-block;
+    height: 1.5rem;
+    aspect-ratio: 1 / 1;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+img.mini-pfp {
+    display: block;
+    height: 2.3rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 /* Main Bar */
@@ -136,8 +153,48 @@ i.privacy {
 /* Search Bar */
 
 #search-bar {
-    color: var(--dark-color, black);
+    color: var(--plain-text-color, black);
     background: var(--light-color, white);
+    padding: 0 clamp(0.5rem, 2vw, 5rem);
+
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#search-bar a {
+    display: block;
+    color: var(--dark-color, black);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#search-bar input[type="search"] {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, 'Open Sans', sans-serif;
+    font-size: 1rem;
+    color: var(--plain-text-color, black);
+    background-color: var(--back-color, silver);
+    line-height: 1.5rem;
+    width: clamp(12ch, 40vw, 50ch);
+    border: none;
+    border-radius: 0.5lh;
+    padding: 0 0.6rem;
+}
+
+i.search {
+    background-image: url("icons/search.svg");
+}
+
+i.notifications {
+    background-image: url("icons/notifications.svg");
+}
+
+#search-bar a#notifications-link {
+    margin-left: auto;
+}
+
+#search-bar a#profile-name-link {
+    min-width: 12ch;
 }
 
 /* Greeting Bar */
