@@ -353,6 +353,34 @@ i.fork {
 /* Trending */
 
 #trending {
+    margin: var(--region-margin);
+}
+
+#trending .card {
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#trending a {
+    text-decoration: none;
+    color: unset;
+}
+
+#trending a:hover {
+    text-decoration: underline;
+}
+
+.trending-project {
+    display: flex;
+    flex-direction: row;
+    gap: 0.8rem;
+}
+
+.trending-project h3 {
+    color: var(--dark-color, black);
+    font-size: unset;
 }
 
 /* Sidebar for wide screen */
@@ -361,7 +389,7 @@ i.fork {
     body {
         display: grid;
         grid-template-columns: minmax(15rem, 2fr) 5fr 2fr;
-        grid-template-rows: min-content min-content 1fr 1fr;
+        grid-template-rows: min-content min-content min-content auto;
     }
     
     #main-bar {
