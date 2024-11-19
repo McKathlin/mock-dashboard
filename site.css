@@ -353,6 +353,7 @@ i.fork {
 /* Trending */
 
 #trending {
+    margin: var(--region-margin);
 }
 
 /* Sidebar for wide screen */
