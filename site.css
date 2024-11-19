@@ -15,7 +15,7 @@
     --theme-highlight-color: #207a50;
     --accent-color: #d69532;
 
-    --top-bar-padding: 0 clamp(0.75rem, 2.5vw, 5rem);
+    --top-bar-padding: 0.5rem clamp(0.75rem, 2.5vw, 5rem);
 
     font-size: clamp(12px, calc(10px + 0.5vw), 28px);
 }
@@ -157,7 +157,7 @@ i.privacy {
 #search-bar {
     color: var(--plain-text-color, black);
     background: var(--light-color, white);
-    padding: var(--top-bar-padding, 0);
+    padding: var(--top-bar-padding, 0.5rem);
 
     display: flex;
     align-items: center;
@@ -205,13 +205,22 @@ i.notifications {
     color: var(--dark-color, black);
     background: var(--light-color, white);
     box-shadow: 0 0.25rem 0.25rem 0 #00000824;
-    padding: var(--top-bar-padding);
+    padding: var(--top-bar-padding, 0.5rem);
+    padding-bottom: 0.8rem;
 
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 1rem;
+}
+
+img.focus-pfp {
+    display: block;
+    height: 4rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 #greeting-block {
@@ -245,7 +254,7 @@ i.notifications {
     body {
         display: grid;
         grid-template-columns: minmax(15rem, 2fr) 5fr 2fr;
-        grid-template-rows: 3rem 5rem 1fr 1fr;
+        grid-template-rows: min-content min-content 1fr 1fr;
     }
     
     #main-bar {
