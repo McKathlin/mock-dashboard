@@ -275,6 +275,9 @@ img.focus-pfp {
     color: var(--plain-text-color);
     background-color: var(--light-color, white);
     padding: 1rem 0.5rem 1rem 1rem;
+    border-radius: 0.5rem;
+    border-left: 0.5rem solid var(--accent-color);
+    box-shadow: var(--subtle-shadow);
 }
 
 /* Announcements */
