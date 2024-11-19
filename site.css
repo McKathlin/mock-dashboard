@@ -170,11 +170,15 @@ i.privacy {
 }
 
 #search-bar input[type="search"] {
-    background-color: var(--back-color);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, 'Open Sans', sans-serif;
+    font-size: 1rem;
+    color: var(--plain-text-color, black);
+    background-color: var(--back-color, silver);
     line-height: 1.5rem;
     width: clamp(12ch, 40vw, 50ch);
     border: none;
     border-radius: 0.5lh;
+    padding: 0 0.6rem;
 }
 
 i.search {
