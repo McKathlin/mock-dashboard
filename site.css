@@ -13,9 +13,10 @@
     --light-color: white;
     --theme-color: #1f694b;
     --theme-highlight-color: #207a50;
-    --accent-color: #d69532;
+    --accent-color: #f5c543;
 
     --top-bar-padding: 0.5rem clamp(0.5rem, 3vw, 5rem);
+    --subtle-shadow: 0.2rem 0.2rem 0.2rem 0 #00000818;
     --page-font: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     --system-font: system-ui, -apple-system, 'Segoe UI', Roboto, Ubuntu, 'Open Sans', sans-serif;
 
@@ -257,6 +258,23 @@ img.focus-pfp {
 /* Projects */
 
 #projects {
+    font-size: 0.9rem;
+}
+
+#projects .card-wrapper {
+    height: 90%;
+    padding: 0.5rem 1rem;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    grid-auto-rows: 1fr;
+    gap: 1.5rem 1.2rem;
+}
+
+.project-card {
+    color: var(--plain-text-color);
+    background-color: var(--light-color, white);
+    padding: 1rem 0.5rem 1rem 1rem;
 }
 
 /* Announcements */
