@@ -165,6 +165,7 @@ i.privacy {
 #search-bar a {
     display: block;
     color: var(--dark-color, black);
+    font-weight: bold;
     text-decoration: none;
 }
 
