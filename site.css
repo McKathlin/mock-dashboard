@@ -68,7 +68,7 @@ img.mini-pfp {
 .card {
     color: var(--plain-text-color);
     background-color: var(--light-color, white);
-    padding: 1rem 0.5rem 0.8rem 1rem;
+    padding: 1rem;
     border-radius: var(--card-edge);
     box-shadow: var(--subtle-shadow);
 }
@@ -287,8 +287,9 @@ img.focus-pfp {
     gap: 1.5rem 1.2rem;
 }
 
-.project {
+.project.card {
     border-left: 0.5rem solid var(--accent-color);
+    padding: 1rem 0.5rem 0.8rem 1rem;
 
     display: flex;
     flex-flow: column;
@@ -333,6 +334,20 @@ i.fork {
 
 #announcements {
     margin: var(--region-margin);
+}
+
+#announcements h3 {
+    color: var(--dark-color);
+    font-size: 0.9rem;
+}
+
+#announcements p {
+    font-size: 0.7rem;
+}
+
+#announcements .card hr {
+    border: 1px solid var(--back-color);
+    margin: 0.7rem 0;
 }
 
 /* Trending */
