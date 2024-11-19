@@ -17,7 +17,9 @@
 
     --top-bar-padding: 0.5rem clamp(0.5rem, 3vw, 5rem);
     --region-margin: 1.2rem 1rem;
+    --card-edge: 0.4rem;
     --subtle-shadow: 0.2rem 0.2rem 0.2rem 0 #00000818;
+
     --page-font: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     --system-font: system-ui, -apple-system, 'Segoe UI', Roboto, Ubuntu, 'Open Sans', sans-serif;
 
@@ -61,6 +63,14 @@ img.mini-pfp {
     aspect-ratio: 1 / 1;
     border-radius: 50%;
     object-fit: cover;
+}
+
+.card {
+    color: var(--plain-text-color);
+    background-color: var(--light-color, white);
+    padding: 1rem 0.5rem 0.8rem 1rem;
+    border-radius: var(--card-edge);
+    box-shadow: var(--subtle-shadow);
 }
 
 /* Main Bar */
@@ -277,24 +287,19 @@ img.focus-pfp {
     gap: 1.5rem 1.2rem;
 }
 
-.project-card {
-    color: var(--plain-text-color);
-    background-color: var(--light-color, white);
-    padding: 1rem 0.5rem 0.8rem 1rem;
-    border-radius: 0.5rem;
+.project {
     border-left: 0.5rem solid var(--accent-color);
-    box-shadow: var(--subtle-shadow);
 
     display: flex;
     flex-flow: column;
 }
 
-.project-card h3 {
+.project h3 {
     color: var(--dark-color);
     font-size: 1rem;
 }
 
-.project-card p {
+.project p {
     font-size: 0.85rem;
 }
 
@@ -327,13 +332,12 @@ i.fork {
 /* Announcements */
 
 #announcements {
-
+    margin: var(--region-margin);
 }
 
 /* Trending */
 
 #trending {
-
 }
 
 /* Sidebar for wide screen */
