@@ -9,13 +9,15 @@
 :root {
     --back-color: #ecebe4;
     --dark-color: black;
-    --plain-text-color: #444040;
+    --plain-text-color: #5f5454;
     --light-color: white;
     --theme-color: #1f694b;
     --theme-highlight-color: #207a50;
-    --accent-color: #d69532;
+    --accent-color: #f5c543;
 
     --top-bar-padding: 0.5rem clamp(0.5rem, 3vw, 5rem);
+    --region-margin: 1.2rem 1rem;
+    --subtle-shadow: 0.2rem 0.2rem 0.2rem 0 #00000818;
     --page-font: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     --system-font: system-ui, -apple-system, 'Segoe UI', Roboto, Ubuntu, 'Open Sans', sans-serif;
 
@@ -37,7 +39,12 @@ h1 {
 }
 
 h2 {
+    color: var(--dark-color, black);
     font-size: 1.2rem;
+}
+
+h2.region-head {
+    margin-bottom: 0.6rem;
 }
 
 i {
@@ -257,6 +264,64 @@ img.focus-pfp {
 /* Projects */
 
 #projects {
+    font-size: 0.9rem;
+    margin: var(--region-margin, 1rem);
+}
+
+#projects .card-wrapper {
+    height: 90%;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    grid-auto-rows: 1fr;
+    gap: 1.5rem 1.2rem;
+}
+
+.project-card {
+    color: var(--plain-text-color);
+    background-color: var(--light-color, white);
+    padding: 1rem 0.5rem 0.8rem 1rem;
+    border-radius: 0.5rem;
+    border-left: 0.5rem solid var(--accent-color);
+    box-shadow: var(--subtle-shadow);
+
+    display: flex;
+    flex-flow: column;
+}
+
+.project-card h3 {
+    color: var(--dark-color);
+    font-size: 1rem;
+}
+
+.project-card p {
+    font-size: 0.85rem;
+}
+
+.action-row {
+    margin-top: auto;
+    padding-right: 1rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.action-row i {
+    height: 1.2rem;
+}
+
+i.star {
+    background-image: url("icons/add-star.svg");
+}
+
+i.watch {
+    background-image: url("icons/add-watch.svg");
+}
+
+i.fork {
+    background-image: url("icons/fork.svg");
 }
 
 /* Announcements */
