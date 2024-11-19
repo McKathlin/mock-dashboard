@@ -169,6 +169,14 @@ i.privacy {
     text-decoration: none;
 }
 
+#search-bar input[type="search"] {
+    background-color: var(--back-color);
+    line-height: 1.5rem;
+    width: clamp(12ch, 40vw, 50ch);
+    border: none;
+    border-radius: 0.5lh;
+}
+
 i.search {
     background-image: url("icons/search.svg");
 }
