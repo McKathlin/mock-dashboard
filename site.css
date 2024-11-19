@@ -274,10 +274,39 @@ img.focus-pfp {
 .project-card {
     color: var(--plain-text-color);
     background-color: var(--light-color, white);
-    padding: 1rem 0.5rem 1rem 1rem;
+    padding: 1rem 0.5rem 0.8rem 1rem;
     border-radius: 0.5rem;
     border-left: 0.5rem solid var(--accent-color);
     box-shadow: var(--subtle-shadow);
+
+    display: flex;
+    flex-flow: column;
+}
+
+.action-row {
+    margin-top: auto;
+    padding-right: 1rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.action-row i {
+    height: 1.2rem;
+}
+
+i.star {
+    background-image: url("icons/add-star.svg");
+}
+
+i.watch {
+    background-image: url("icons/add-watch.svg");
+}
+
+i.fork {
+    background-image: url("icons/fork.svg");
 }
 
 /* Announcements */
