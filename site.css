@@ -16,12 +16,14 @@
     --accent-color: #d69532;
 
     --top-bar-padding: 0.5rem clamp(0.75rem, 2.5vw, 5rem);
+    --page-font: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    --system-font: system-ui, -apple-system, 'Segoe UI', Roboto, Ubuntu, 'Open Sans', sans-serif;
 
     font-size: clamp(12px, calc(10px + 0.5vw), 28px);
 }
 
 body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: var(--page-font, sans-serif);
     color: var(--plain-text-color, black);
     background-color: var(--back-color, white);
 
@@ -172,7 +174,7 @@ i.privacy {
 }
 
 #search-bar input[type="search"] {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, 'Open Sans', sans-serif;
+    font-family: var(--system-font, sans-serif);
     font-size: 1rem;
     color: var(--plain-text-color, black);
     background-color: var(--back-color, silver);
@@ -229,6 +231,18 @@ img.focus-pfp {
 
 #greeting-block h1 {
     font-size: 1.2rem;
+}
+
+#greeting-bar button {
+    font-family: var(--system-font, sans-serif);
+    font-size: 0.9rem;
+    line-height: 2rem;
+    color: var(--light-color);
+    background-color: var(--theme-color);
+    width: 10ch;
+    height: 1lh;
+    border: none;
+    border-radius: 0.5lh;
 }
 
 /* Projects */
