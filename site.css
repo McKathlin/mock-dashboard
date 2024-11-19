@@ -155,7 +155,7 @@ i.privacy {
 #search-bar {
     color: var(--plain-text-color, black);
     background: var(--light-color, white);
-    padding: 0 4rem 0 2rem;
+    padding: 0 clamp(0.5rem, 2vw, 5rem);
 
     display: flex;
     align-items: center;
@@ -187,6 +187,10 @@ i.notifications {
 
 #search-bar a#notifications-link {
     margin-left: auto;
+}
+
+#search-bar a#profile-name-link {
+    min-width: 12ch;
 }
 
 /* Greeting Bar */
