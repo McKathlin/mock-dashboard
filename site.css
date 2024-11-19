@@ -276,10 +276,13 @@ img.focus-pfp {
 #projects {
     font-size: 0.9rem;
     margin: var(--region-margin, 1rem);
+
+    display: flex;
+    flex-flow: column;
 }
 
 #projects .card-wrapper {
-    height: 90%;
+    flex: auto;
 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
