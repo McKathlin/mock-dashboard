@@ -235,14 +235,19 @@ img.focus-pfp {
 
 #greeting-bar button {
     font-family: var(--system-font, sans-serif);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     line-height: 2rem;
-    color: var(--light-color);
-    background-color: var(--theme-color);
+    color: var(--light-color, white);
+    background-color: var(--theme-color, blue);
     width: 10ch;
     height: 1lh;
     border: none;
     border-radius: 0.5lh;
+    cursor: pointer;
+}
+
+#greeting-bar button:hover {
+    background-color: var(--theme-highlight-color);
 }
 
 /* Projects */
