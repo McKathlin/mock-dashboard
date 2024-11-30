@@ -397,7 +397,7 @@ i.fork {
     
     #main-bar {
         position: static;
-        height: unset;
+        min-height: 100vh;
         width: unset;
         grid-column: 1;
         grid-row: 1 / -1;
