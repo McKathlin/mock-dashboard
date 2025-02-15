@@ -111,6 +111,7 @@ img.mini-pfp {
     padding: 0.5rem 1rem;
     color: var(--light-color);
     text-decoration: none;
+    transition: background-color 0.4s ease-out;
 }
 
 #main-bar a:hover {
@@ -265,6 +266,7 @@ img.focus-pfp {
     border: none;
     border-radius: 0.5lh;
     cursor: pointer;
+    transition: background-color 0.4s ease-out;
 }
 
 #greeting-bar button:hover {
